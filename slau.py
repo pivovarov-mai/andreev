@@ -52,4 +52,5 @@ def main():
     print(myB)
     Gauss(myA, myB)
 
-main()
+if __name__ ==  "__main__":
+    main()
