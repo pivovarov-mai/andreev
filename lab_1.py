@@ -1,4 +1,9 @@
-def introduse_kof(num,A,B):
+import numpy as np
+import scipy
+from scipy.linalg import solve
+
+
+def input_koeff(num,A,B):
     print('Ввод матрицы коэффициентов')
     for row in range (num):
         A.append([])
@@ -44,13 +49,26 @@ def Gauss(A, B):
     for i in range(len(X)):
         print(f'x{i+1} = {round(X[i], 2)}')
 
+def numpy_realization(myA,myB):
+    print('Проверка через библиотеку NumPy:')
+    X = np.linalg.solve(myA,myB)
+    for i in range(len(X)):
+        print(f'x{i+1} = {round(X[i], 2)}')
+
+def scipy_realization(myA,myB):
+    print('Проверка через библиотеку SciPy:')
+    X = solve(myA,myB)
+    for i in range(len(X)):
+        print(f'x{i+1} = {round(X[i], 2)}')
+
 def main():
     myA = []
     myB = []
     strings_count = int(input('Введите количество строк матрицы коэффициентов:'))
-    introduse_kof(strings_count,myA,myB)
-    print(myB)
+    input_koeff(strings_count,myA,myB)
     Gauss(myA, myB)
+    numpy_realization(myA,myB)
+    scipy_realization(myA,myB)
 
 if __name__ ==  "__main__":
     main()
