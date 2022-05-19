@@ -4,6 +4,7 @@ from matrix import Matrix, Vector
 
 eps = 0.01
 
+# Это не функция проверки, это функция для вывода значений на экран
 def numpy_eig(matrix, my_values):
     print('*'*35)
     print("My eigenvalues:")
