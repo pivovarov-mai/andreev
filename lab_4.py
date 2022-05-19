@@ -1,4 +1,3 @@
-import sys
 from math import pi, atan, cos, sin, sqrt
 
 epsilon = 0.01
