@@ -75,7 +75,9 @@ def spin_method(A):
             break
 
     eigenvalues = [round(A_new[i][i], 2) for i in range(n)]
-    eigenvectors = [[round(eigenvectors[i][j], 4) for j in range(n)] for i in range(n)]
+    # Выше использовал функцию округления для более красивого вывода, т.к выводятся 16 символов после запятой
+    eigenvectors = [[(eigenvectors[i][j]) for j in range(n)] for i in range(n)]
+    # Тут добавил случайно, забыл что делаю это в 97 строчке
 
     return eigenvalues, eigenvectors
 
