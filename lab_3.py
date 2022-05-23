@@ -13,6 +13,7 @@ def zendel_method(alpha_norma, beta, alpha):
     x_old = beta.copy()
     x_new = [0 for _ in range(len(beta))]
     epsilon_k_fst = 1
+    # Эта переменная не несёт никакого математического смысла, просто показывает первое приближение epsilon.
     cnt_iteration = 0
     while True:
         x_new = [0 for _ in range(len(beta))]
